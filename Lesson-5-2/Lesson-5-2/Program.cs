@@ -13,6 +13,10 @@ namespace Lesson_5_2
         {
             string filename = "startup.txt";
             File.WriteAllText(filename, "Текущая дата и время");
+            //Текущие дата и время
+            File.AppendAllText(filename, Environment.NewLine);
+            File.AppendAllText(filename, DateTime.Now.ToString());
+            
         }
     }
 }
