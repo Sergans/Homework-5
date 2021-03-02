@@ -16,6 +16,9 @@ namespace Lesson_5_2
             //Текущие дата и время
             File.AppendAllText(filename, Environment.NewLine);
             File.AppendAllText(filename, DateTime.Now.ToString());
+            //Вариант с проверкой
+            string textFile = File.ReadAllText(filename);
+            Console.WriteLine(textFile);
             
         }
     }
