@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Lesson_5_3
 {
@@ -21,6 +22,14 @@ namespace Lesson_5_3
                 bin[i] = Convert.ToByte(nomber[i]);
 
 
+            }
+            //Сохраняем файл с созданием
+            File.WriteAllBytes("binar.bin", bin);
+            // С проверкой
+            byte[] text = File.ReadAllBytes("binar.bin");
+            foreach(byte bit in text)
+            {
+                Console.WriteLine(bit);
             }
         }
     }
