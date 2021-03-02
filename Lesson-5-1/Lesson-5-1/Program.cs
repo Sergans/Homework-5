@@ -13,7 +13,9 @@ namespace Lesson_5_1
         {
             string filename = "text.txt";
             File.WriteAllText(filename, Console.ReadLine());
-            
+            // С проверкой
+            string text = File.ReadAllText(filename);
+            Console.WriteLine(text);
             
         }
     }
